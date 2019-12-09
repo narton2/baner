@@ -13,13 +13,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: lightblue;
+  background: #008049;
 }
 
 .banner {
   height: 500px;
   border-radius: 15px;
-  border: 5px solid black;
   -webkit-box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
           box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
   width: 800px;
@@ -27,5 +26,45 @@ body {
   background: linear-gradient(to bottom, #85f1f7 1%, #fce188 39%, white 100%);
   position: relative;
   overflow: hidden;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 330px;
+  z-index: 3;
+  -webkit-animation: animGrass 5s 0s infinite linear;
+          animation: animGrass 5s 0s infinite linear;
+}
+
+.ground div {
+  float: left;
+  width: 50%;
+  height: 330px;
+  background: url(../images/drzewo1.png) 200px 20px no-repeat, url(../images/drzewo2.png) 650px 10px no-repeat, url(../images/drzewo1.png) 510px 20px no-repeat, url(../images/drzewo3.png) 0 20px no-repeat, url(../images/ziemia.png) 0 bottom repeat-x;
+}
+
+@-webkit-keyframes animGrass {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+}
+
+@keyframes animGrass {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
 }
 /*# sourceMappingURL=styles.css.map */

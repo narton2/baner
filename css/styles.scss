@@ -1,19 +1,18 @@
-html,body {
-    margin:0;
-    height: 100%;
-}
 
+html, body {
+    margin:0;
+    height:100%;
+}
 body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background: lightblue;
+    background: lighten(#007643, 2);
 }
 
 .banner {
     height:500px;
     border-radius: 15px;
-    border: 5px solid black;
     box-shadow:
             0 0 300px rgba(#FFD658, 0.3),
             0 0 100px rgba(#FFD658, 0.5);
@@ -21,4 +20,30 @@ body {
     background: linear-gradient(to bottom, rgba(133,241,247,1) 1%, rgba(252,225,136,1) 39%, rgba(255,255,255,1) 100%);
     position: relative;
     overflow: hidden;
+}
+.ground {
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:200%;
+    height:330px;
+    z-index: 3;
+    animation: animGrass 5s 0s infinite linear;
+}
+
+.ground div {
+    float:left;
+    width:50%;
+    height:330px;
+    background:
+        url(../images/drzewo1.png) 200px 20px no-repeat,
+        url(../images/drzewo2.png) 650px 10px no-repeat,
+        url(../images/drzewo1.png) 510px 20px no-repeat,
+        url(../images/drzewo3.png) 0 20px no-repeat,
+        url(../images/ziemia.png) 0 bottom repeat-x;
+}
+
+@keyframes animGrass {
+    0% {transform:translate(-50%, 0);}
+    100% {transform:translate(0%, 0);}
 }
