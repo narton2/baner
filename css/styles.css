@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: lightblue;
+}
+
+.banner {
+  height: 500px;
+  border-radius: 15px;
+  border: 5px solid black;
+  -webkit-box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
+          box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
+  width: 800px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #85f1f7), color-stop(39%, #fce188), to(white));
+  background: linear-gradient(to bottom, #85f1f7 1%, #fce188 39%, white 100%);
+  position: relative;
+  overflow: hidden;
+}
+/*# sourceMappingURL=styles.css.map */
