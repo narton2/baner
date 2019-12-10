@@ -1,6 +1,7 @@
-html, body {
-  margin: 0;
+@charset "UTF-8";
+body, html {
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -13,58 +14,206 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #008049;
+  background-color: #1be41b;
 }
 
 .banner {
-  height: 500px;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
-          box-shadow: 0 0 300px rgba(255, 214, 88, 0.3), 0 0 100px rgba(255, 214, 88, 0.5);
-  width: 800px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #85f1f7), color-stop(39%, #fce188), to(white));
-  background: linear-gradient(to bottom, #85f1f7 1%, #fce188 39%, white 100%);
+  border: 5px solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #2b74fc), color-stop(39%, #87d1fc), to(white));
+  background: linear-gradient(to bottom, #2b74fc 1%, #87d1fc 39%, white 100%);
   position: relative;
   overflow: hidden;
 }
 
-.ground {
+.galactic {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 200%;
-  height: 330px;
+  height: 100%;
   z-index: 3;
-  -webkit-animation: animGrass 5s 0s infinite linear;
-          animation: animGrass 5s 0s infinite linear;
+  -webkit-animation: animGalactic 50s 0s infinite linear;
+          animation: animGalactic 50s 0s infinite linear;
 }
 
-.ground div {
+.galactic div {
+  float: left;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #2b74fc), color-stop(39%, #87d1fc), to(white));
+  background: linear-gradient(to bottom, #2b74fc 1%, #87d1fc 39%, white 100%);
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@-webkit-keyframes animGalactic {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes animGalactic {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+.planet {
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 200%;
+  height: 100%;
+  z-index: 10;
+  -webkit-animation: animPlants 30s 0s infinite linear;
+          animation: animPlants 30s 0s infinite linear;
+}
+
+.planet div {
+  float: left;
+  background: url(../images/ziemka.png) 10% 30% no-repeat, url(../images/planet2.png) 40% 10% no-repeat, url(../images/planet3.png) 70% 100% no-repeat;
+  width: 50%;
+  height: 100%;
+  background-size: 10vw 10vw;
+}
+
+@-webkit-keyframes animPlants {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes animPlants {
+  0% {
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+.clouds1 {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  -webkit-animation: animClouds 20s 0s infinite linear;
+          animation: animClouds 20s 0s infinite linear;
+}
+
+.clouds1 div {
   float: left;
   width: 50%;
-  height: 330px;
-  background: url(../images/drzewo1.png) 200px 20px no-repeat, url(../images/drzewo2.png) 650px 10px no-repeat, url(../images/drzewo1.png) 510px 20px no-repeat, url(../images/drzewo3.png) 0 20px no-repeat, url(../images/ziemia.png) 0 bottom repeat-x;
+  height: 100%;
+  background: url(../images/chmura3.png) 0% 10% no-repeat, url(../images/chmura2.png) 80% 50% no-repeat, url(../images/chmura3.png) 15% 90% no-repeat;
+  background-size: 10vw 5vw;
 }
 
-@-webkit-keyframes animGrass {
+/* chmóry zestaw 2 */
+.clouds2 {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  opacity: 0.4;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  -webkit-animation: animClouds 30s 0s infinite linear;
+          animation: animClouds 30s 0s infinite linear;
+}
+
+.clouds2 div {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background: url(../images/chmura3.png) 50% 80% no-repeat, url(../images/chmura2.png) 10% 40% no-repeat, url(../images/chmura3.png) 95% 25% no-repeat;
+  background-size: 10vw 5vw;
+}
+
+@-webkit-keyframes animClouds {
   0% {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  100% {
     -webkit-transform: translate(0%, 0);
             transform: translate(0%, 0);
   }
-}
-
-@keyframes animGrass {
-  0% {
+  100% {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
-  100% {
+}
+
+@keyframes animClouds {
+  0% {
     -webkit-transform: translate(0%, 0);
             transform: translate(0%, 0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+.spa {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.spaceship {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  z-index: 255;
+  background: url(../images/statek.png) 0 0 no-repeat;
+  background-size: 15vw 10vw;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: spaceshiprotate 5s infinite alternate linear;
+          animation: spaceshiprotate 5s infinite alternate linear;
+}
+
+@-webkit-keyframes spaceshiprotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(5vw);
+            transform: translateY(5vw);
+  }
+}
+
+@keyframes spaceshiprotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: translateY(5vw);
+            transform: translateY(5vw);
   }
 }
 /*# sourceMappingURL=styles.css.map */
